@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Rediscovering Joy</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+                Rediscover <span>Joy</span>
+            </div>
+            <div class="links" id="nav-links">
+        
+                <a href="#">Blog</a>
+                
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="toggleNav()"></i>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1500">
+            <h1>Rediscovering Joy</h1>
+            <p>How Hobbies and Creative Skills Bring Fulfillment</p>
+            <p style="max-width: 700px; margin: 0 auto;">
+                In today’s busy world, it’s easy to lose touch with what makes us happy outside of work and daily responsibilities. Engaging in hobbies and creative activities is a wonderful way to reclaim that joy. Here’s how my hobbies of cycling, badminton, running, socializing, and creative crafting enrich my life, and why you might consider exploring your own passions as well.
+            </p>
+            <a href="#explore" class="scroll-down">Explore</a>
+        </div>
+    </section>
+
+    <section id="explore" class="hobbies-section">
+        <h2>Discover Hobbies that Bring Joy</h2>
+    <div class="hobby-container">
+                <div class="hobby-card left-align" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="hobby-image">
+                        <img src="WhatsApp Image 2024-11-07 at 20.05.43 (2).jpeg" alt="Cycling">
+                    </div>
+                    <div class="hobby-content">
+                        <h3>Cycling</h3>
+                        <p>Cycling is more than just a workout; it’s a way to explore and clear the mind. There’s a sense of freedom that comes with each ride, whether through a bustling city or a quiet countryside. The rhythm of pedaling and the wind in your face bring a meditative quality that’s hard to find elsewhere. Cycling has taught me patience, endurance, and the thrill of the journey rather than just the destination.
+                        </p>
+                        <div class="hobby-interactions">
+                            <button class="icon" onclick="toggleLike(this)">
+                                <i class="fa-regular fa-heart"></i> <span>Like</span>
+                            </button>
+                            <button class="icon" onclick="toggleCommentForm(this)">
+                                <i class="fa-regular fa-comment"></i> <span>Comment</span>
+                            </button>
+                            <button class="icon" onclick="sharePost(this)">
+                                <i class="fa-solid fa-share"></i> <span>Share</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="hobby-card right-align" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="hobby-image">
+                        <img src="WhatsApp Image 2024-11-07 at 20.05.43 (1).jpeg" alt="Badminton">
+                    </div>
+                    <div class="hobby-content">
+                        <h3>Badminton</h3>
+                        <p>Badminton offers a unique blend of strategy and agility. It's a social sport that requires teamwork and sharp reflexes, keeping me on my toes—both literally and mentally. Playing badminton with friends or in friendly matches is a great way to connect with others, compete, and have fun without taking things too seriously. It’s a reminder that sports can be challenging and friendly at the same time, giving us something to laugh about even if we miss a shot or two.
+                        </p>
+                        <div class="hobby-interactions">
+                            <button class="icon" onclick="toggleLike(this)">
+                                <i class="fa-regular fa-heart"></i> <span>Like</span>
+                            </button>
+                            <button class="icon" onclick="toggleCommentForm(this)">
+                                <i class="fa-regular fa-comment"></i> <span>Comment</span>
+                            </button>
+                            <button class="icon" onclick="sharePost(this)">
+                                <i class="fa-solid fa-share"></i> <span>Share</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="hobby-card left-align" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="hobby-image">
+                        <img src="WhatsApp Image 2024-11-07 at 20.05.43.jpeg" alt="Running">
+                    </div>
+                    <div class="hobby-content">
+                        <h3>Running</h3>
+                        <p>Running is my way of reconnecting with myself. There's a simplicity to it—just you, the road, and the steady rhythm of your feet. Running clears my head and gives me time to think or, sometimes, to think of nothing at all. It’s refreshing, energizing, and always a challenge to push a little farther or go a bit faster. Every run is a reminder of personal growth and resilience.
+                        </p>
+                        <div class="hobby-interactions">
+                            <button class="icon" onclick="toggleLike(this)">
+                                <i class="fa-regular fa-heart"></i> <span>Like</span>
+                            </button>
+                            <button class="icon" onclick="toggleCommentForm(this)">
+                                <i class="fa-regular fa-comment"></i> <span>Comment</span>
+                            </button>
+                            <button class="icon" onclick="sharePost(this)">
+                                <i class="fa-solid fa-share"></i> <span>Share</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="hobby-card right-align" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="hobby-image">
+                        <img src="WhatsApp Image 2024-11-07 at 20.05.42.jpeg" alt="Creative Craft">
+                    </div>
+                    <div class="hobby-content">
+                        <h3>Creative Craft</h3>
+                        <p>One of my favorite creative outlets is making things out of everyday materials. There’s something rewarding about taking what others might overlook and transforming it into something new and beautiful. It’s a chance to experiment with colors, textures, and shapes, bringing ideas to life with my hands. Crafting lets me escape, immerse myself in something tangible, and feel accomplished when I see a finished piece that started as just an idea.
+                        </p>
+                        <div class="hobby-interactions">
+                            <button class="icon" onclick="toggleLike(this)">
+                                <i class="fa-regular fa-heart"></i> <span>Like</span>
+                            </button>
+                            <button class="icon" onclick="toggleCommentForm(this)">
+                                <i class="fa-regular fa-comment"></i> <span>Comment</span>
+                            </button>
+                            <button class="icon" onclick="sharePost(this)">
+                                <i class="fa-solid fa-share"></i> <span>Share</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+     </div>
+        <!-- Add more hobby cards with alternating left-align and right-align classes -->
+        
+
+
+    </section>
+
+    <section class="cta" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
+        <h2 data-aos="zoom-in" data-aos-delay="200" data-aos-duration="800">Start Your Journey</h2>
+        <p class="quote-text" style="max-width: 700px; margin: 0 auto 30px; text-align: center;" 
+           data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+            In the end, our hobbies and passions are more than just pastimes; they’re a reflection of who we are and who we aspire to be. Whether it’s dedicating a few minutes or an entire weekend, embracing what you love is an investment in your well-being. So, take that first step—or the next one—toward something that excites you. After all, life is a journey best enjoyed with a heart full of passions and a mind open to discovering more of yourself along the way.
+        </p>
+        <button onclick="window.location.href='#'" 
+           style="padding: 10px 20px; margin-top: 20px;" 
+           data-aos="flip-up" data-aos-delay="600" data-aos-duration="1000">
+            Get Started Today
+        </button>
+    </section>
+        <!-- External AOS library for animations -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        AOS.init({ offset: 0 });
+
+        // Toggle Nav function for mobile view
+        function toggleNav() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script> <!-- AOS Animation Library -->
+<script>
+    AOS.init();
+</script>
+
+</body>
+</html>

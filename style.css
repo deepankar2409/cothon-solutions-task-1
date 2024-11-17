@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #FFEB00;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Navbar Styling */
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align items to the right */
+    padding: 20px;
+    background-color: #fff;
+}
+
+.logo {
+    margin-right: auto; /* Pushes the logo to the far left */
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.links {
+    display: flex;
+    gap: 20px; /* Space between links */
+}
+
+.links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    padding: 10px 15px;
+}
+
+.hamburg {
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 20px;
+    display: none; /* Hide hamburger icon on larger screens */
+}
+
+@media (max-width: 768px) {
+    .links {
+        display: none; /* Hide links on smaller screens */
+    }
+    .hamburg {
+        display: block; /* Show hamburger icon on smaller screens */
+    }
+}
+/* Hero section styles */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Background image with animation */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('Untitled Project.jpg'); /* Replace with your background image URL */
+    background-size: cover;
+    background-position: center;
+    filter: brightness(40%); /* Darken background for better text readability */
+    animation: zoomIn 20s ease-in-out infinite alternate; /* Slow zoom-in effect */
+    z-index: -1; /* Keep background behind content */
+}
+
+/* Keyframes for zoom-in effect */
+@keyframes zoomIn {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+/* Content styling */
+.hero-content {
+    z-index: 1; /* Ensure content is above background */
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    max-width: 700px;
+    margin: 0 auto 1.5rem;
+}
+
+.hero-content .scroll-down {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #ff6b6b;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero-content .scroll-down:hover {
+    background-color: #ff4b4b;
+}
+
+/* Hobbies Section Styling */
+.hobbies-section {
+    padding: 50px 20px;
+    background-color: #117554;
+    text-align: center;
+    color: #333;
+}
+
+.hobbies-section h2 {
+    font-size: 2.5rem;
+    color: #f6f4f3; /* Valid hex code */
+    margin-bottom: 30px;
+}
+
+/* Wrapper to center all hobby cards */
+.hobby-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px; /* Space between cards */
+}
+
+/* Centered hobby card with consistent width */
+/* Wrapper for hobby cards with alternating left-right layout */
+.hobby-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Space between cards */
+    padding: 20px;
+    align-items: center; /* Center all the cards */
+}
+
+/* Left-aligned card */
+.hobby-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* Right-aligned card - Use nth-child selector to reverse the layout for every alternate card */
+.hobby-container .hobby-card:nth-child(even) {
+    align-self: flex-end; /* Push even-numbered cards to the right */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .hobby-container {
+        padding: 10px;
+    }
+
+    .hobby-card {
+        flex-direction: column; /* Stack image and content vertically on mobile */
+    }
+
+    /* Keep the alternating left-right behavior on mobile */
+    .hobby-container .hobby-card:nth-child(even) {
+        align-self: flex-start; /* Push even-numbered cards to the left */
+    }
+}
+
+.hobby-card:not(:last-child) {
+    margin-bottom: 20px;
+}
+/* Left-aligned card */
+.hobby-card.left-align {
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+/* Right-aligned card */
+.hobby-card.right-align {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.hobby-image {
+    flex: 1;
+    max-width: 300px; /* Keep image size consistent */
+}
+
+.hobby-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hobby-content {
+    flex: 2; /* Flex more to give the content area more space */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hobby-content h3 {
+    margin-top: 0;
+}
+
+.hobby-content p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.hobby-interactions {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+
+.hobby-interactions button.icon {
+    border: none;
+    background: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #555;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.hobby-interactions button.icon i {
+    font-size: 16px;
+}
+
+.hobby-interactions button.icon:hover {
+    color: #000;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    color: #888;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.icon:hover {
+    color: #333;
+}
+
+.icon i {
+    margin-right: 5px;
+}
+
+/* Styling for interaction buttons */
+button {
+    padding: 8px 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .hobby-card, .left-align, .right-align {
+        flex-direction: column;
+    }
+
+    .hobby-card img, .hobby-content {
+        width: 100%;
+    }
+}
+
+.cta {
+    background-color: #6EC207;
+    padding: 60px 30px;
+    text-align: center;
+    color: #F5F5DC;
+}
+
+.cta h2 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.cta p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    line-height: 1.5;
+}
+
+.cta button {
+    padding: 12px 25px;
+    background-color: #117554;
+    border: none;
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    border-radius: 5px;
+}
+.cta button:hover {
+    transform: scale(1.05); /* Slightly increase size on hover */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.cta button:hover {
+    background-color: #4379F2;
+    transform: scale(1.05);
+}
+
